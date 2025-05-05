@@ -23,3 +23,23 @@ Option Power Shell type
 
     
     $Passwordprofile -MailNickname "HardityaS" -userprincipalname "Hardityas@tcs.com" - Account Enabled
+
+#Bulk User creation for Csv
+
+
+
+
+    $users = Import-Csv -Path "C:\path\to\your\Users.csv"
+
+foreach ($user in $users) {
+    New-MgUser -UserPrincipalName $user.UserName `
+               -GivenName $user.FirstName `
+               -Surname $user.LastName `
+               -DisplayName $user.DisplayName `
+               -JobTitle $user.JobTitle `
+               -Department $user.Department `
+               -AccountEnabled $true `
+               -MailNickname $user.FirstName `
+               -UsageLocation "US" `
+               -PasswordProfile @{ForceChangePasswordNextSignIn = $true; Password = "Password"}
+}
