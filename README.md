@@ -12,6 +12,10 @@ Option Power Shell type
 
   Create a Password profile value
    $Passwordprofile =@{Password = <"passwords>"}
+
+   
   Create New User 
     New-mguser Displayname "harditya Siva" -Passwordprofile
+
+    
     $Passwordprofile -MailNickname "HardityaS" -userprincipalname "Hardityas@tcs.com" - Account Enabled
