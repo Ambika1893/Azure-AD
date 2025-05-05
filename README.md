@@ -31,8 +31,13 @@ Option Power Shell type
 
     $users = Import-Csv -Path "C:\path\to\your\Users.csv"
 
-foreach ($user in $users) {
+foreach 
+
+
+($user in $users) {
+
     New-MgUser -UserPrincipalName $user.UserName `
+    
                -GivenName $user.FirstName `
                -Surname $user.LastName `
                -DisplayName $user.DisplayName `
