@@ -11,10 +11,14 @@ Option Power Shell type
   New - mguser
 
   Create a Password profile value
+
+  
    $Passwordprofile =@{Password = <"passwords>"}
 
    
   Create New User 
+
+  
     New-mguser Displayname "harditya Siva" -Passwordprofile
 
     
