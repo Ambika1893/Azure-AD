@@ -48,3 +48,8 @@ foreach
                -UsageLocation "US" `
                -PasswordProfile @{ForceChangePasswordNextSignIn = $true; Password = "Password"}
 }
+
+
+## Azure Containers
+
+While virtual machines are an excellent way to reduce costs versus the investments that are necessary for physical hardware, they're still limited to a single operating system per virtual machine. If you want to run multiple instances of an application on a single host machine, containers are an excellent choice
